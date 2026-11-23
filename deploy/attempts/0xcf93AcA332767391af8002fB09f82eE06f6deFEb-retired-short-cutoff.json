@@ -1,0 +1,415 @@
+{
+  "network": {
+    "name": "GenLayer StudioNet",
+    "alias": "studionet",
+    "chain_id": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "explorer_root": "https://explorer-studio.genlayer.com"
+  },
+  "roles": {
+    "publisher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+    "buyer": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+    "reviewer": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+    "note": "Live demonstration uses the currently active configured StudioNet wallet for all three named roles. Direct tests use distinct addresses for role authorization."
+  },
+  "contract": {
+    "schema_verified_at": "2026-11-23",
+    "address": "0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+    "explorer_url": "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+    "name": "LabelDesk",
+    "explorer_verified": true,
+    "source": "contracts/labeldesk.py",
+    "explorer_verified_at": "2026-11-23",
+    "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6"
+  },
+  "featured_revisions": [
+    "LABELDESK-REFUNDS-R1",
+    "LABELDESK-REFUNDS-R2"
+  ],
+  "deployment_history": [
+    {
+      "evm_tx_hash": "0xe191f0c1c380783987891c064a672a421b9cb85718c5726aac3ad7c25a9ea41b",
+      "status": "EVM_REVERTED_BEFORE_CONSENSUS",
+      "reason": "FeesDistributionMissing",
+      "consensus_transaction_created": false
+    },
+    {
+      "tx_hash": "0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613",
+      "status": "FINALIZED_SUCCESS",
+      "contract_address": "0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB"
+    },
+    {
+      "status": "FINALIZED_ACCEPTED",
+      "explorer_url": "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+      "contract_address": "0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+      "tx_hash": "0xd1158260a816f8b95fc2e4296ca83ca474f3df5253881a0a3fe5d24b485efb01",
+      "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6"
+    }
+  ],
+  "transactions": {
+    "revision_one_acceptance_attempt": "0xc57a80daea77e6f92ea65b7733737786160f16920c0b1c061cf6f375c3d5049a",
+    "revision_two_acceptance": "",
+    "live_decisions": {
+      "publish_revision_one_initial_failure": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_ERROR",
+        "attempted_at": "2026-11-23T17:30:10.684Z",
+        "note": "Finalized MAJORITY_AGREE with FINISHED_WITH_ERROR. Receipt calldata showed revision_id null because the first script loaded IDs from the wrong JSON file. This publish action made no model judgment and did not create a release. A corrected one-time attempt is permitted only after get_release_ids confirms the revision is absent.",
+        "tx_hash": "0x3ebe2146961e32c8d28422280a29ac4aa18920ca04f7371a203ff98796531f87",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x3ebe2146961e32c8d28422280a29ac4aa18920ca04f7371a203ff98796531f87",
+        "submitted_at": "2026-11-23T17:30:15.223Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_ERROR",
+        "finalized_at": "2026-11-23T17:30:58.59Z",
+        "no_model_judgment": true,
+        "no_release_created": "pending read-only on-chain check"
+      },
+      "publish_revision_one_null_rows_failure": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_ERROR",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T17:33:12.509Z",
+        "note": "Finalized MAJORITY_AGREE with FINISHED_WITH_ERROR. Receipt calldata showed rows_json null because the script passed the release config instead of the frozen row fixture. This publish action made no model judgment and did not create a release. Corrected one-time publication now validates its revision ID and rows and requires get_release_ids to confirm no release exists.",
+        "tx_hash": "0x74fdb15051ee0c6f2b4d924d0e8353f92146d498f2b91a17d359daedb3f45970",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x74fdb15051ee0c6f2b4d924d0e8353f92146d498f2b91a17d359daedb3f45970",
+        "submitted_at": "2026-11-23T17:33:16.25Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_ERROR",
+        "finalized_at": "2026-11-23T17:33:54.338Z",
+        "no_model_judgment": true,
+        "no_release_created": "pending read-only on-chain check"
+      },
+      "publish_revision_one_storage_failure": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_ERROR",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T17:35:15.976Z",
+        "note": "Finalized MAJORITY_AGREE with FINISHED_WITH_ERROR. Receipt traceback: TreeMap[str, Address] rejected the string buyer value at release_buyers[revision_id]. Explicit Address conversion is now in the contract; no label judgment ran. This immutable deployment cannot be repaired in place, so the corrected code is deployed at a new address.",
+        "tx_hash": "0x23dc3634aa4f8229c20e3557a32c7d958b49ba620692e8faffa115480e26ddaf",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x23dc3634aa4f8229c20e3557a32c7d958b49ba620692e8faffa115480e26ddaf",
+        "submitted_at": "2026-11-23T17:35:19.977Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_ERROR",
+        "finalized_at": "2026-11-23T17:36:04.297Z",
+        "no_model_judgment": true,
+        "contract_error": "AttributeError: 'str' object has no attribute 'as_bytes'"
+      },
+      "publish_revision_one": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T17:47:27.644Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "cutoff_not_before": 1795456692,
+        "tx_hash": "0x7d9ba108606a703b0a9f19476019eb9f4607f0fcb443acf03bdfceea8743318d",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x7d9ba108606a703b0a9f19476019eb9f4607f0fcb443acf03bdfceea8743318d",
+        "submitted_at": "2026-11-23T17:47:31.945Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T17:48:13.442Z"
+      },
+      "approve_LABELDESK-REFUNDS-R1": {
+        "action": "approve_terms",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T17:48:13.445Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x7714f6c7f940544ef1bfcf1aebfc1e226a850616f2a8a75db6d253ad8bf1cae0",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x7714f6c7f940544ef1bfcf1aebfc1e226a850616f2a8a75db6d253ad8bf1cae0",
+        "submitted_at": "2026-11-23T17:48:18.592Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T17:48:55.346Z",
+        "expected_digests": {
+          "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+          "sample_digest": "fdc5667d53738559982c594db6bcf2fbde3a71f72275dc863b427f93668daa4e",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44"
+        }
+      },
+      "review_r1_TKT_104": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T17:48:55.348Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x330ea435a71bbb586d78b931e3d8739c9f901dfab03cf717a939d0611717cbcc",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x330ea435a71bbb586d78b931e3d8739c9f901dfab03cf717a939d0611717cbcc",
+        "submitted_at": "2026-11-23T17:48:58.907Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T17:49:49.871Z"
+      },
+      "challenge_r1_reuse_TKT_104": {
+        "action": "submit_challenge",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "CH-R1-104",
+        "attempted_at": "2026-11-23T17:49:49.872Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x5db28bc320b53801dd954cc2dda7d48b49183a5ed6d7ddc15087859409642482",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x5db28bc320b53801dd954cc2dda7d48b49183a5ed6d7ddc15087859409642482",
+        "submitted_at": "2026-11-23T17:49:55.817Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T17:50:37.921Z"
+      },
+      "challenge_r1_first_judgment_TKT_205": {
+        "action": "submit_challenge",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "CH-R1-205",
+        "attempted_at": "2026-11-23T17:50:37.923Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x713e02cb539375f11fe32908f13dd83c1de7461365fe4e88e0e5b2333392fc08",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x713e02cb539375f11fe32908f13dd83c1de7461365fe4e88e0e5b2333392fc08",
+        "submitted_at": "2026-11-23T17:50:44.006Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T17:51:39.504Z"
+      },
+      "adjudicate_challenge_r1_TKT_205": {
+        "action": "adjudicate_challenge",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "CH-R1-205",
+        "attempted_at": "2026-11-23T17:58:12.005Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xf390a8a997063b0a08f7670372140064388d8f8a7dafbfe730380c945b68d80b",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xf390a8a997063b0a08f7670372140064388d8f8a7dafbfe730380c945b68d80b",
+        "submitted_at": "2026-11-23T17:58:16.183Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T17:59:28.319Z"
+      },
+      "review_r1_TKT_318": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T17:59:28.32Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x8d993cddb638d7938e0430575878e63e2af9922d248fae88bc1a87121697923b",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x8d993cddb638d7938e0430575878e63e2af9922d248fae88bc1a87121697923b",
+        "submitted_at": "2026-11-23T17:59:33.77Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:00:24.413Z"
+      },
+      "revision_one_acceptance_attempt": {
+        "action": "accept_release",
+        "expected": "FINALIZED_ERROR",
+        "state": "FINALIZED_ERROR",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T18:00:24.414Z",
+        "note": "Expected buyer rejection: the target row was finally adjudicated LABEL_INCORRECT; revision 1 remains failed with no receipt.",
+        "tx_hash": "0xc57a80daea77e6f92ea65b7733737786160f16920c0b1c061cf6f375c3d5049a",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xc57a80daea77e6f92ea65b7733737786160f16920c0b1c061cf6f375c3d5049a",
+        "submitted_at": "2026-11-23T18:00:30.593Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_ERROR",
+        "finalized_at": "2026-11-23T18:01:14.451Z",
+        "expected_error": "SAMPLE_CONTAINS_INCORRECT_OR_INSUFFICIENT_FINDING"
+      },
+      "publish_revision_two": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:01:14.453Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "cutoff_not_before": 1795456949,
+        "tx_hash": "0xf5017afa1a1b514b3478be646edb5ad01098a2e37b3586738da55224d5a251de",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xf5017afa1a1b514b3478be646edb5ad01098a2e37b3586738da55224d5a251de",
+        "submitted_at": "2026-11-23T18:01:17.923Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:01:55.164Z"
+      },
+      "approve_LABELDESK-REFUNDS-R2": {
+        "action": "approve_terms",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_ERROR",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:01:55.165Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x75a7d4b22dfa9559d6647f1c27b4fa3df6c819b047d770f0689575fcc2a819a4",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x75a7d4b22dfa9559d6647f1c27b4fa3df6c819b047d770f0689575fcc2a819a4",
+        "submitted_at": "2026-11-23T18:01:58.937Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_ERROR",
+        "finalized_at": "2026-11-23T18:03:32.935Z"
+      },
+      "close_incomplete_r2_after_missed_terms_cutoff": {
+        "action": "expire_review",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "SUBMISSION_FAILED",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:08:11.7798443Z",
+        "note": "No contract state changed and no GenLayer transaction hash was produced. Correct method close_expired_review succeeded in the separate, fee-estimated transaction.",
+        "error": "CLI method name was invalid and the envelope had zero fee value; it reverted before GenLayer consensus.",
+        "evm_tx_hash": "0xe9a80fc492af644c690735fe02b15742f6ad6838d8f45b6340e92f9e30064138",
+        "no_genlayer_transaction": true
+      },
+      "close_expired_r2_cutoff_without_terms": {
+        "action": "close_expired_review",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:10:37.0894439Z",
+        "note": "One-time close of the expired, unapproved R2 on the retired short-window deployment; fee simulation succeeded before this write.",
+        "status_name": "ACCEPTED",
+        "tx_hash": "0x3c5af18ec6f55b5557b90b51cbf71bf27b63da0dd82daefaa8f4e3fc82ee73f1",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x3c5af18ec6f55b5557b90b51cbf71bf27b63da0dd82daefaa8f4e3fc82ee73f1",
+        "submitted_at": "2026-11-23T18:12:21.8709742Z",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:14:28.3761113Z"
+      }
+    }
+  },
+  "evidence_entries": [
+    {
+      "type": "GenLayer Explorer Contract",
+      "title": "Retired LabelDesk deployment (address-storage defect)",
+      "url": "https://explorer-studio.genlayer.com/address/0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Successful LabelDesk deployment transaction",
+      "url": "https://explorer-studio.genlayer.com/tx/0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x3ebe2146961e32c8d28422280a29ac4aa18920ca04f7371a203ff98796531f87"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x74fdb15051ee0c6f2b4d924d0e8353f92146d498f2b91a17d359daedb3f45970"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x23dc3634aa4f8229c20e3557a32c7d958b49ba620692e8faffa115480e26ddaf"
+    },
+    {
+      "verified": true,
+      "type": "GenLayer Explorer Contract",
+      "title": "Active LabelDesk contract address on GenLayer StudioNet",
+      "url": "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Corrected LabelDesk deployment transaction",
+      "url": "https://explorer-studio.genlayer.com/tx/0xd1158260a816f8b95fc2e4296ca83ca474f3df5253881a0a3fe5d24b485efb01"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x7d9ba108606a703b0a9f19476019eb9f4607f0fcb443acf03bdfceea8743318d"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "approve LABELDESK-REFUNDS-R1",
+      "url": "https://explorer-studio.genlayer.com/tx/0x7714f6c7f940544ef1bfcf1aebfc1e226a850616f2a8a75db6d253ad8bf1cae0"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r1 TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x330ea435a71bbb586d78b931e3d8739c9f901dfab03cf717a939d0611717cbcc"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "challenge r1 reuse TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x5db28bc320b53801dd954cc2dda7d48b49183a5ed6d7ddc15087859409642482"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "challenge r1 first judgment TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0x713e02cb539375f11fe32908f13dd83c1de7461365fe4e88e0e5b2333392fc08"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "adjudicate challenge r1 TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0xf390a8a997063b0a08f7670372140064388d8f8a7dafbfe730380c945b68d80b"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r1 TKT 318",
+      "url": "https://explorer-studio.genlayer.com/tx/0x8d993cddb638d7938e0430575878e63e2af9922d248fae88bc1a87121697923b"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "revision one acceptance attempt",
+      "url": "https://explorer-studio.genlayer.com/tx/0xc57a80daea77e6f92ea65b7733737786160f16920c0b1c061cf6f375c3d5049a"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision two",
+      "url": "https://explorer-studio.genlayer.com/tx/0xf5017afa1a1b514b3478be646edb5ad01098a2e37b3586738da55224d5a251de"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "approve LABELDESK-REFUNDS-R2",
+      "url": "https://explorer-studio.genlayer.com/tx/0x75a7d4b22dfa9559d6647f1c27b4fa3df6c819b047d770f0689575fcc2a819a4"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Close expired unapproved R2 review",
+      "url": "https://explorer-studio.genlayer.com/tx/0x3c5af18ec6f55b5557b90b51cbf71bf27b63da0dd82daefaa8f4e3fc82ee73f1"
+    }
+  ],
+  "live_verification": {
+    "status": "DEPLOYED_WAITING_FOR_PRODUCT_TRANSACTIONS",
+    "checked_at": "2026-11-23",
+    "verified_contract_schema": true,
+    "initial_release_ids": [],
+    "note": "Corrected contract is finalized and queryable on GenLayer StudioNet. The previous immutable deployment and three agreed execution-error transactions are preserved as separate evidence; none produced a model judgment.",
+    "last_local_incident": "The write-capable deploy-script client returned HTML for a read-only gen_call preflight; no transaction hash was created. The supported read-only GenLayer CLI call succeeded and confirmed an empty release list.",
+    "release_ids_before_r1_retry": [],
+    "failed_publish_receipt": {
+      "tx_hash": "0x3ebe2146961e32c8d28422280a29ac4aa18920ca04f7371a203ff98796531f87",
+      "result_name": "MAJORITY_AGREE",
+      "execution_result": "FINISHED_WITH_ERROR",
+      "decoded_argument_issue": "revision_id was null because the script loaded revision IDs from the row fixture instead of featured-releases.json",
+      "no_model_judgment": true,
+      "no_release_created": true
+    },
+    "release_ids_preflight_contract": "0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+    "release_ids_preflight_at": "2026-11-23T17:46:58Z",
+    "preflight_source": "GenLayer CLI v0.40.0: call <active-contract-address> get_release_ids --rpc https://studio.genlayer.com/api",
+    "preflight_result": "[]"
+  },
+  "contract_history": [
+    {
+      "name": "LabelDesk",
+      "status": "RETIRED_AFTER_ADDRESS_STORAGE_DEFECT",
+      "verified_on_network": true,
+      "address": "0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+      "explorer_url": "https://explorer-studio.genlayer.com/address/0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+      "deployment_tx": "0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613",
+      "note": "First deployment; its publication method could not store ABI-decoded string addresses in Address TreeMaps."
+    }
+  ]
+}

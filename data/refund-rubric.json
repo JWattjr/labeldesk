@@ -1,0 +1,17 @@
+{
+  "version": "refund-label-rubric/1",
+  "clauses": [
+    {
+      "id": "NEW_REFUND_REQUEST",
+      "text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved."
+    },
+    {
+      "id": "REFUND_STATUS",
+      "text": "REFUND_STATUS means the customer asks about the progress, timing, or arrival of a refund already approved or issued."
+    },
+    {
+      "id": "INSUFFICIENT",
+      "text": "If the text does not establish which applies, the result is INSUFFICIENT. Do not infer approval from the word refund."
+    }
+  ]
+}

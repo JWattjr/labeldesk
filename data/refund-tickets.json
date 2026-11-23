@@ -1,0 +1,51 @@
+{
+  "dataset_id": "LABELDESK-REFUNDS-SYNTHETIC",
+  "synthetic": true,
+  "provenance": "Hand-authored examples based on the LabelDesk build brief. They contain no personal information and do not represent a real support dataset.",
+  "sample_row_ids": ["TKT-104", "TKT-205", "TKT-318"],
+  "threshold": 3,
+  "revision_one": [
+    {
+      "rowId": "TKT-104",
+      "ticketText": "Where is the refund you approved on Tuesday?",
+      "proposedLabel": "NEW_REFUND_REQUEST"
+    },
+    {
+      "rowId": "TKT-205",
+      "ticketText": "The item arrived broken. Please refund my order.",
+      "proposedLabel": "NEW_REFUND_REQUEST"
+    },
+    {
+      "rowId": "TKT-318",
+      "ticketText": "You said the money was on its way back to my card. When should I see it?",
+      "proposedLabel": "REFUND_STATUS"
+    },
+    {
+      "rowId": "TKT-427",
+      "ticketText": "Any news about my refund?",
+      "proposedLabel": "REFUND_STATUS"
+    }
+  ],
+  "revision_two": [
+    {
+      "rowId": "TKT-104",
+      "ticketText": "Where is the refund you approved on Tuesday?",
+      "proposedLabel": "REFUND_STATUS"
+    },
+    {
+      "rowId": "TKT-205",
+      "ticketText": "The item arrived broken. Please refund my order.",
+      "proposedLabel": "NEW_REFUND_REQUEST"
+    },
+    {
+      "rowId": "TKT-318",
+      "ticketText": "You said the money was on its way back to my card. When should I see it?",
+      "proposedLabel": "REFUND_STATUS"
+    },
+    {
+      "rowId": "TKT-427",
+      "ticketText": "Any news about my refund?",
+      "proposedLabel": "REFUND_STATUS"
+    }
+  ]
+}

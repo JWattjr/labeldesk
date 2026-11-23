@@ -1,0 +1,1810 @@
+{
+  "network": {
+    "name": "GenLayer StudioNet",
+    "alias": "studionet",
+    "chain_id": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "explorer_root": "https://explorer-studio.genlayer.com"
+  },
+  "roles": {
+    "publisher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+    "buyer": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+    "reviewer": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+    "note": "Live demonstration uses the currently active configured StudioNet wallet for all three named roles. Direct tests use distinct addresses for role authorization."
+  },
+  "contract": {
+    "schema_verified_at": "2026-11-23",
+    "address": "0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+    "explorer_url": "https://explorer-studio.genlayer.com/address/0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+    "name": "LabelDesk",
+    "explorer_verified": true,
+    "source": "contracts/labeldesk.py",
+    "explorer_verified_at": "2026-11-23",
+    "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6"
+  },
+  "featured_revisions": [
+    "LABELDESK-REFUNDS-R1",
+    "LABELDESK-REFUNDS-R2"
+  ],
+  "deployment_history": [
+    {
+      "evm_tx_hash": "0xe191f0c1c380783987891c064a672a421b9cb85718c5726aac3ad7c25a9ea41b",
+      "status": "EVM_REVERTED_BEFORE_CONSENSUS",
+      "reason": "FeesDistributionMissing",
+      "consensus_transaction_created": false
+    },
+    {
+      "tx_hash": "0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613",
+      "status": "FINALIZED_SUCCESS",
+      "contract_address": "0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB"
+    },
+    {
+      "status": "FINALIZED_ACCEPTED",
+      "explorer_url": "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+      "contract_address": "0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+      "tx_hash": "0xd1158260a816f8b95fc2e4296ca83ca474f3df5253881a0a3fe5d24b485efb01",
+      "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6"
+    },
+    {
+      "deployment_id": "final-contract-after-cutoff-fix",
+      "attempted_at": "2026-11-23T18:14:46.3197882Z",
+      "status": "EVM_REVERTED_BEFORE_CONSENSUS",
+      "source": "contracts/labeldesk.py",
+      "network": "GenLayer StudioNet",
+      "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+      "note": "The deployment envelope included validator fee distribution but omitted the nonzero fee deposit. No contract was created; the next deployment uses the previously successful 0.0001 GEN deposit.",
+      "reason": "FeeValueMustBeNonZero",
+      "evm_tx_hash": "0xff4a0d56207ac00e188d926afb2be8a40507575fd145977487737b3ff7410842",
+      "consensus_transaction_created": false
+    },
+    {
+      "deployment_id": "final-contract-fee-aware",
+      "attempted_at": "2026-11-23T18:20:12.2094615Z",
+      "status": "FINALIZED_SUCCESS",
+      "source": "contracts/labeldesk.py",
+      "network": "GenLayer StudioNet",
+      "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+      "note": "Fee-aware CLI client estimates and attaches the signed StudioNet deposit. One submission only; a missing hash is treated as uncertain and is never retried automatically.",
+      "submitted_at": "2026-11-23T18:20:26.085Z",
+      "fee_value": "100000000000010352",
+      "tx_hash": "0x790e4032a1e8911276be0a7fa0df261d7ab51c1450e879b2a9b65d82c02f7492",
+      "explorer_url": "https://explorer-studio.genlayer.com/tx/0x790e4032a1e8911276be0a7fa0df261d7ab51c1450e879b2a9b65d82c02f7492",
+      "status_name": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "execution_result": "FINISHED_WITH_RETURN",
+      "finalized_at": "2026-11-23T18:21:18.606Z"
+    },
+    {
+      "contract_address": "0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+      "tx_hash": "0x790e4032a1e8911276be0a7fa0df261d7ab51c1450e879b2a9b65d82c02f7492",
+      "status": "FINALIZED_SUCCESS",
+      "explorer_url": "https://explorer-studio.genlayer.com/address/0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+      "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+      "note": "Active immutable deployment containing the expired-closure status fix."
+    }
+  ],
+  "transactions": {
+    "revision_one_acceptance_attempt": "0x7c2ae97116650e7ffe6820325bec4b1d743a781a99d9349ae82f634dd24a958f",
+    "revision_two_acceptance": "0xe1ff38641c630cdcf54c4fad6e7e673949f42d5bde7b54524ac43076ea73ec9b",
+    "live_decisions": {
+      "publish_revision_one": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T18:22:38.211Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "cutoff_not_before": 1795458803,
+        "tx_hash": "0x1a43fd11623cfdaa12cbb0a169e7a3a121b58d1fcbd15e945f5a1c350ac3cfc4",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x1a43fd11623cfdaa12cbb0a169e7a3a121b58d1fcbd15e945f5a1c350ac3cfc4",
+        "submitted_at": "2026-11-23T18:22:45.859Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:23:28.477Z"
+      },
+      "approve_LABELDESK-REFUNDS-R1": {
+        "action": "approve_terms",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T18:23:28.479Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x26cc4fbe5a66488b2fc1921ddfa5fab6fa23cc8564968e29e0a36bec8b5e87a8",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x26cc4fbe5a66488b2fc1921ddfa5fab6fa23cc8564968e29e0a36bec8b5e87a8",
+        "submitted_at": "2026-11-23T18:23:32.8Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:24:07.956Z",
+        "expected_digests": {
+          "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+          "sample_digest": "fdc5667d53738559982c594db6bcf2fbde3a71f72275dc863b427f93668daa4e",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44"
+        }
+      },
+      "review_r1_TKT_104": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T18:24:07.957Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xb409940f3c5b977022b819d761885031ef00cac85ebf1721431d25a4956f9732",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xb409940f3c5b977022b819d761885031ef00cac85ebf1721431d25a4956f9732",
+        "submitted_at": "2026-11-23T18:24:11.702Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:24:54.677Z"
+      },
+      "challenge_r1_reuse_TKT_104": {
+        "action": "submit_challenge",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "CH-R1-104",
+        "attempted_at": "2026-11-23T18:24:54.678Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xd23b93c706741363c72e542525172253b5b22f92fcac8e1ecb23c1ea05521c85",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xd23b93c706741363c72e542525172253b5b22f92fcac8e1ecb23c1ea05521c85",
+        "submitted_at": "2026-11-23T18:24:58.179Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:25:35.309Z"
+      },
+      "challenge_r1_first_judgment_TKT_205": {
+        "action": "submit_challenge",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "CH-R1-205",
+        "attempted_at": "2026-11-23T18:25:35.31Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xc0d5e00187c499fed9ccab1769f2b55e36b2f87a9d91dd722b167bd4c3e6fe67",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xc0d5e00187c499fed9ccab1769f2b55e36b2f87a9d91dd722b167bd4c3e6fe67",
+        "submitted_at": "2026-11-23T18:25:41.315Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:26:28.595Z"
+      },
+      "adjudicate_challenge_r1_TKT_205": {
+        "action": "adjudicate_challenge",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "CH-R1-205",
+        "attempted_at": "2026-11-23T18:33:23.003Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xb3de1d5253abb56e514209a672689beb7bd05463c877a419a63366e857f9e745",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xb3de1d5253abb56e514209a672689beb7bd05463c877a419a63366e857f9e745",
+        "submitted_at": "2026-11-23T18:33:28.054Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:34:10.17Z"
+      },
+      "review_r1_TKT_318": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T18:34:10.171Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xbed7ecb169bf8d9c42a5f7f811efd12ab9422202fdf5a7dabb91f0974ec9cd49",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xbed7ecb169bf8d9c42a5f7f811efd12ab9422202fdf5a7dabb91f0974ec9cd49",
+        "submitted_at": "2026-11-23T18:34:13.593Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:35:01.806Z"
+      },
+      "revision_one_acceptance_attempt": {
+        "action": "accept_release",
+        "expected": "FINALIZED_ERROR",
+        "state": "FINALIZED_ERROR",
+        "revision_id": "LABELDESK-REFUNDS-R1",
+        "attempted_at": "2026-11-23T18:35:01.808Z",
+        "note": "Expected buyer rejection: the target row was finally adjudicated LABEL_INCORRECT; revision 1 remains failed with no receipt.",
+        "tx_hash": "0x7c2ae97116650e7ffe6820325bec4b1d743a781a99d9349ae82f634dd24a958f",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x7c2ae97116650e7ffe6820325bec4b1d743a781a99d9349ae82f634dd24a958f",
+        "submitted_at": "2026-11-23T18:35:05.123Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_ERROR",
+        "finalized_at": "2026-11-23T18:35:48.333Z",
+        "expected_error": "SAMPLE_CONTAINS_INCORRECT_OR_INSUFFICIENT_FINDING"
+      },
+      "publish_revision_two": {
+        "action": "publish_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:35:48.334Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "cutoff_not_before": 1795459593,
+        "tx_hash": "0x8e5abab97755421cd21e453992a43efd20bc8c038be1e89c0546765c626bf9af",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x8e5abab97755421cd21e453992a43efd20bc8c038be1e89c0546765c626bf9af",
+        "submitted_at": "2026-11-23T18:35:52.204Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:36:29.517Z"
+      },
+      "approve_LABELDESK-REFUNDS-R2": {
+        "action": "approve_terms",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:36:29.518Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x1283c43bbe5756b596c2a9eed396b4d2f07f2aa8d1dbd1c65ba2ab2e4c09cf01",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x1283c43bbe5756b596c2a9eed396b4d2f07f2aa8d1dbd1c65ba2ab2e4c09cf01",
+        "submitted_at": "2026-11-23T18:36:33.382Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:37:16.226Z",
+        "expected_digests": {
+          "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+          "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44"
+        }
+      },
+      "review_r2_TKT_104": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:37:16.227Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x32a2c774a8c6a44ba86d9a5254300e851a3a0f9b354b38045710fb4b6ba938dc",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x32a2c774a8c6a44ba86d9a5254300e851a3a0f9b354b38045710fb4b6ba938dc",
+        "submitted_at": "2026-11-23T18:37:23.26Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:38:11.645Z"
+      },
+      "review_r2_TKT_205": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:38:11.646Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x24b6785760fde8219575c9944145c9f16e12ca397af6edb972ddb301291bfd2a",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x24b6785760fde8219575c9944145c9f16e12ca397af6edb972ddb301291bfd2a",
+        "submitted_at": "2026-11-23T18:38:15.941Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:38:54.598Z"
+      },
+      "review_r2_TKT_318": {
+        "action": "review_row",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:38:54.599Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0x0385a08d9ea01e6fbd729d937bc39aab280cadc7e7677f91e6b76b373b2e315c",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x0385a08d9ea01e6fbd729d937bc39aab280cadc7e7677f91e6b76b373b2e315c",
+        "submitted_at": "2026-11-23T18:38:58.349Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:39:36.502Z"
+      },
+      "revision_two_acceptance": {
+        "action": "accept_release",
+        "expected": "FINALIZED_SUCCESS",
+        "state": "FINALIZED_SUCCESS",
+        "revision_id": "LABELDESK-REFUNDS-R2",
+        "attempted_at": "2026-11-23T18:46:33.003Z",
+        "note": "One submission only; this record prevents blind retries.",
+        "tx_hash": "0xe1ff38641c630cdcf54c4fad6e7e673949f42d5bde7b54524ac43076ea73ec9b",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xe1ff38641c630cdcf54c4fad6e7e673949f42d5bde7b54524ac43076ea73ec9b",
+        "submitted_at": "2026-11-23T18:46:37.848Z",
+        "status_name": "FINALIZED",
+        "result_name": "MAJORITY_AGREE",
+        "execution_result": "FINISHED_WITH_RETURN",
+        "finalized_at": "2026-11-23T18:47:22.942Z"
+      }
+    },
+    "deployment_final_contract": "0x790e4032a1e8911276be0a7fa0df261d7ab51c1450e879b2a9b65d82c02f7492"
+  },
+  "evidence_entries": [
+    {
+      "type": "GenLayer Explorer Contract",
+      "title": "Retired LabelDesk deployment (address-storage defect)",
+      "url": "https://explorer-studio.genlayer.com/address/0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Successful LabelDesk deployment transaction",
+      "url": "https://explorer-studio.genlayer.com/tx/0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x3ebe2146961e32c8d28422280a29ac4aa18920ca04f7371a203ff98796531f87",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x74fdb15051ee0c6f2b4d924d0e8353f92146d498f2b91a17d359daedb3f45970",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x23dc3634aa4f8229c20e3557a32c7d958b49ba620692e8faffa115480e26ddaf",
+      "verified": true
+    },
+    {
+      "verified": true,
+      "type": "GenLayer Explorer Contract",
+      "title": "Retired LabelDesk deployment (30-second R2 cutoff)",
+      "url": "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb"
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Corrected LabelDesk deployment transaction",
+      "url": "https://explorer-studio.genlayer.com/tx/0xd1158260a816f8b95fc2e4296ca83ca474f3df5253881a0a3fe5d24b485efb01",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x7d9ba108606a703b0a9f19476019eb9f4607f0fcb443acf03bdfceea8743318d",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "approve LABELDESK-REFUNDS-R1",
+      "url": "https://explorer-studio.genlayer.com/tx/0x7714f6c7f940544ef1bfcf1aebfc1e226a850616f2a8a75db6d253ad8bf1cae0",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r1 TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x330ea435a71bbb586d78b931e3d8739c9f901dfab03cf717a939d0611717cbcc",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "challenge r1 reuse TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x5db28bc320b53801dd954cc2dda7d48b49183a5ed6d7ddc15087859409642482",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "challenge r1 first judgment TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0x713e02cb539375f11fe32908f13dd83c1de7461365fe4e88e0e5b2333392fc08",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "adjudicate challenge r1 TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0xf390a8a997063b0a08f7670372140064388d8f8a7dafbfe730380c945b68d80b",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r1 TKT 318",
+      "url": "https://explorer-studio.genlayer.com/tx/0x8d993cddb638d7938e0430575878e63e2af9922d248fae88bc1a87121697923b",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "revision one acceptance attempt",
+      "url": "https://explorer-studio.genlayer.com/tx/0xc57a80daea77e6f92ea65b7733737786160f16920c0b1c061cf6f375c3d5049a",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision two",
+      "url": "https://explorer-studio.genlayer.com/tx/0xf5017afa1a1b514b3478be646edb5ad01098a2e37b3586738da55224d5a251de",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "approve LABELDESK-REFUNDS-R2",
+      "url": "https://explorer-studio.genlayer.com/tx/0x75a7d4b22dfa9559d6647f1c27b4fa3df6c819b047d770f0689575fcc2a819a4",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Close expired unapproved R2 review",
+      "url": "https://explorer-studio.genlayer.com/tx/0x3c5af18ec6f55b5557b90b51cbf71bf27b63da0dd82daefaa8f4e3fc82ee73f1",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Final LabelDesk deployment transaction",
+      "url": "https://explorer-studio.genlayer.com/tx/0x790e4032a1e8911276be0a7fa0df261d7ab51c1450e879b2a9b65d82c02f7492",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Contract",
+      "title": "Active LabelDesk contract (StudioNet)",
+      "url": "https://explorer-studio.genlayer.com/address/0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision one",
+      "url": "https://explorer-studio.genlayer.com/tx/0x1a43fd11623cfdaa12cbb0a169e7a3a121b58d1fcbd15e945f5a1c350ac3cfc4",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "approve LABELDESK-REFUNDS-R1",
+      "url": "https://explorer-studio.genlayer.com/tx/0x26cc4fbe5a66488b2fc1921ddfa5fab6fa23cc8564968e29e0a36bec8b5e87a8",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r1 TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0xb409940f3c5b977022b819d761885031ef00cac85ebf1721431d25a4956f9732",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "challenge r1 reuse TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0xd23b93c706741363c72e542525172253b5b22f92fcac8e1ecb23c1ea05521c85",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "challenge r1 first judgment TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0xc0d5e00187c499fed9ccab1769f2b55e36b2f87a9d91dd722b167bd4c3e6fe67",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "adjudicate challenge r1 TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0xb3de1d5253abb56e514209a672689beb7bd05463c877a419a63366e857f9e745",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r1 TKT 318",
+      "url": "https://explorer-studio.genlayer.com/tx/0xbed7ecb169bf8d9c42a5f7f811efd12ab9422202fdf5a7dabb91f0974ec9cd49",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "revision one acceptance attempt",
+      "url": "https://explorer-studio.genlayer.com/tx/0x7c2ae97116650e7ffe6820325bec4b1d743a781a99d9349ae82f634dd24a958f",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "publish revision two",
+      "url": "https://explorer-studio.genlayer.com/tx/0x8e5abab97755421cd21e453992a43efd20bc8c038be1e89c0546765c626bf9af",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "approve LABELDESK-REFUNDS-R2",
+      "url": "https://explorer-studio.genlayer.com/tx/0x1283c43bbe5756b596c2a9eed396b4d2f07f2aa8d1dbd1c65ba2ab2e4c09cf01",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r2 TKT 104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x32a2c774a8c6a44ba86d9a5254300e851a3a0f9b354b38045710fb4b6ba938dc",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r2 TKT 205",
+      "url": "https://explorer-studio.genlayer.com/tx/0x24b6785760fde8219575c9944145c9f16e12ca397af6edb972ddb301291bfd2a",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "review r2 TKT 318",
+      "url": "https://explorer-studio.genlayer.com/tx/0x0385a08d9ea01e6fbd729d937bc39aab280cadc7e7677f91e6b76b373b2e315c",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "revision two acceptance",
+      "url": "https://explorer-studio.genlayer.com/tx/0xe1ff38641c630cdcf54c4fad6e7e673949f42d5bde7b54524ac43076ea73ec9b",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Publish R1",
+      "url": "https://explorer-studio.genlayer.com/tx/0x69c40d42aa2e537a79efc7ab02e75a6f7268557e736e63dbd4833dca34d194fa",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Approve R1 terms",
+      "url": "https://explorer-studio.genlayer.com/tx/0xabaf2a8c29229a2cdf8659272a3886addd0702000f440c0d64de3d080fb5e1fe",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R1 TKT-104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x7f0df36c2ea9c8b444ca586230b817b8519608167e7bc218539965f24ac20711",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R1 TKT-205",
+      "url": "https://explorer-studio.genlayer.com/tx/0xb16cc393754e96acb632458cb85c7fee230edd33bfa74ca72e7f27263fde5929",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R1 TKT-318",
+      "url": "https://explorer-studio.genlayer.com/tx/0x940369edbb0d3a56e2fc5d81709cddcf4c62546c91681b59d73550d070703018",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Challenge supported R1 label",
+      "url": "https://explorer-studio.genlayer.com/tx/0x528b575efc009c0ce1f5b609be61731fcbb6d36eecbf82bb5bda0074efb81c63",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R1 ambiguity",
+      "url": "https://explorer-studio.genlayer.com/tx/0xba212e4779166ed95033f2217df0b065b75e68e9fdc6796ce07de7c8622965ca",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Publish R2",
+      "url": "https://explorer-studio.genlayer.com/tx/0x6ddc90905014b878aba63ed0da2c43f6af02bfe4e349605b0474c83a45b7bd39",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Approve R2 terms",
+      "url": "https://explorer-studio.genlayer.com/tx/0xfa16be99ca81244cd899c032d2fe2e66d32e5afb8948b839134566c6a36cd991",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R2 TKT-104",
+      "url": "https://explorer-studio.genlayer.com/tx/0x29110142d993ef81bb68657b7f5a93b5f255be291142950a236e9157865d369e",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R2 TKT-205",
+      "url": "https://explorer-studio.genlayer.com/tx/0x4359be7792718676ac993c27a6d8923f5871addfcd7fe9edc92be15a0dd063b8",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Review R2 TKT-318",
+      "url": "https://explorer-studio.genlayer.com/tx/0xdbb4a55c2682378cdc99725c5ab35e69adbd37519fea382e236c1e1cd3b2b5b1",
+      "verified": true
+    },
+    {
+      "type": "GenLayer Explorer Transaction",
+      "title": "Public frontend · Buyer accepts R2",
+      "url": "https://explorer-studio.genlayer.com/tx/0xf86c6806862bb7d33d7767af3d8ffb1c5417c0700f102703c30057ce85256990",
+      "verified": true
+    }
+  ],
+  "live_verification": {
+    "status": "LIVE_VERIFIED",
+    "checked_at": "2026-11-23T18:49:24.0341473Z",
+    "release_ids_preflight_contract": "0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+    "release_ids_before_r1_retry": [],
+    "note": "Read-only StudioNet verification confirmed R1 remains FAILED at 2/3 supported with no acceptance receipt; R2 is ACCEPTED at 3/3 supported with a receipt after its cutoff. Comparison has one proposedLabel change and matching sample, rubric, and threshold. Ticket content is synthetic.",
+    "preflight_source": "genlayer call get_release_ids",
+    "observations": {
+      "network": "GenLayer StudioNet",
+      "chain_id": 61999,
+      "contract_address": "0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+      "release_ids": [
+        "LABELDESK-REFUNDS-R1",
+        "LABELDESK-REFUNDS-R2"
+      ],
+      "read_methods": [
+        "get_release_ids",
+        "get_release",
+        "get_comparison",
+        "get_challenge",
+        "get_judgment",
+        "get_acceptance_receipt"
+      ],
+      "revision_one": {
+        "status": "FAILED",
+        "sampled_rows": 3,
+        "supported_rows": 2,
+        "unsupported_rows": 1,
+        "threshold": 3,
+        "acceptance_receipt": null,
+        "failed_acceptance_tx": "0x7c2ae97116650e7ffe6820325bec4b1d743a781a99d9349ae82f634dd24a958f",
+        "failed_acceptance_reason": "SAMPLE_CONTAINS_INCORRECT_OR_INSUFFICIENT_FINDING"
+      },
+      "revision_two": {
+        "status": "ACCEPTED",
+        "sampled_rows": 3,
+        "supported_rows": 3,
+        "unsupported_rows": 0,
+        "threshold": 3,
+        "acceptance_receipt_id": "AR-789994585569edd8d566d179",
+        "acceptance_tx": "0xe1ff38641c630cdcf54c4fad6e7e673949f42d5bde7b54524ac43076ea73ec9b",
+        "challenge_cutoff": 1795459552,
+        "accepted_at": 1795459597
+      },
+      "comparison": {
+        "change_count": 1,
+        "row_id": "TKT-104",
+        "field": "proposedLabel",
+        "before": "NEW_REFUND_REQUEST",
+        "after": "REFUND_STATUS",
+        "ticket_text": "Where is the refund you approved on Tuesday?",
+        "common_sample_ids": [
+          "TKT-104",
+          "TKT-205",
+          "TKT-318"
+        ],
+        "rubric_identical": true,
+        "threshold_identical": true
+      },
+      "challenges": [
+        {
+          "challenge_id": "CH-R1-104",
+          "outcome": "UPHELD",
+          "resolution_basis": "REUSED_FINALIZED_MATCHING_FINDING",
+          "finding_id": "JF-53f53c8d5a7a4781d792aef7"
+        },
+        {
+          "challenge_id": "CH-R1-205",
+          "outcome": "REJECTED",
+          "resolution_basis": "FIRST_JUDGMENT_TRIGGERED_BY_CHALLENGE",
+          "finding_id": "JF-30a8f118e263a204c5566d69"
+        }
+      ],
+      "explorer_contract_urls": [
+        "https://explorer-studio.genlayer.com/address/0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+        "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+        "https://explorer-studio.genlayer.com/address/0x92A07f60A8fA04F681d43c849903d62209A70b4B"
+      ],
+      "note": "Synthetic data only. All live judgment transactions reached MAJORITY_AGREE; none returned an agreed INSUFFICIENT verdict or a no-consensus result."
+    }
+  },
+  "contract_history": [
+    {
+      "name": "LabelDesk",
+      "status": "RETIRED_AFTER_ADDRESS_STORAGE_DEFECT",
+      "verified_on_network": true,
+      "address": "0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+      "explorer_url": "https://explorer-studio.genlayer.com/address/0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+      "deployment_tx": "0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613",
+      "note": "First deployment; its publication method could not store ABI-decoded string addresses in Address TreeMaps."
+    }
+  ],
+  "frontend_run": {
+    "origin": "https://labeldesk-alpha.vercel.app",
+    "contract": "0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+    "signer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+    "series": "LABELDESK-PORTAL-MWTOMQH2",
+    "transactions": {
+      "Publish R1": {
+        "action": "Publish R1",
+        "initiated_at": "2026-11-23T19:56:38.065Z",
+        "tx_hash": "0x69c40d42aa2e537a79efc7ab02e75a6f7268557e736e63dbd4833dca34d194fa",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x69c40d42aa2e537a79efc7ab02e75a6f7268557e736e63dbd4833dca34d194fa",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T19:58:37.392Z",
+        "validator_votes": {
+          "0x19a02f95418A6c76091CDA37C4fc542CA82805c9": "agree",
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+          "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+          "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+          "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree"
+        }
+      },
+      "Approve R1 terms": {
+        "action": "Approve R1 terms",
+        "initiated_at": "2026-11-23T19:58:49.553Z",
+        "tx_hash": "0xabaf2a8c29229a2cdf8659272a3886addd0702000f440c0d64de3d080fb5e1fe",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xabaf2a8c29229a2cdf8659272a3886addd0702000f440c0d64de3d080fb5e1fe",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T19:59:38.929Z",
+        "validator_votes": {
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x23A15A452F19D1B616276fedC5B8B51d69082959": "idle",
+          "0x240d2d7c8DF220110c26cfFFC532479319Cca0dC": "agree",
+          "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "idle",
+          "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree"
+        }
+      },
+      "Review R1 TKT-104": {
+        "action": "Review R1 TKT-104",
+        "initiated_at": "2026-11-23T19:59:45.570Z",
+        "tx_hash": "0x7f0df36c2ea9c8b444ca586230b817b8519608167e7bc218539965f24ac20711",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x7f0df36c2ea9c8b444ca586230b817b8519608167e7bc218539965f24ac20711",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:00:32.873Z",
+        "validator_votes": {
+          "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "agree",
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+          "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "idle",
+          "0xee46B9Dc4c860149B1d140840284e5374854e746": "agree"
+        }
+      },
+      "Review R1 TKT-205": {
+        "action": "Review R1 TKT-205",
+        "initiated_at": "2026-11-23T20:00:39.421Z",
+        "tx_hash": "0xb16cc393754e96acb632458cb85c7fee230edd33bfa74ca72e7f27263fde5929",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xb16cc393754e96acb632458cb85c7fee230edd33bfa74ca72e7f27263fde5929",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:01:21.170Z",
+        "validator_votes": {
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "idle",
+          "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree",
+          "0xe358f855C96d8E7243836cf986eb037175B9467e": "agree",
+          "0xee46B9Dc4c860149B1d140840284e5374854e746": "agree"
+        }
+      },
+      "Review R1 TKT-318": {
+        "action": "Review R1 TKT-318",
+        "initiated_at": "2026-11-23T20:01:27.715Z",
+        "tx_hash": "0x940369edbb0d3a56e2fc5d81709cddcf4c62546c91681b59d73550d070703018",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x940369edbb0d3a56e2fc5d81709cddcf4c62546c91681b59d73550d070703018",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:02:15.442Z",
+        "validator_votes": {
+          "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "agree",
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+          "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+          "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree",
+          "0xe358f855C96d8E7243836cf986eb037175B9467e": "agree"
+        }
+      },
+      "Challenge supported R1 label": {
+        "action": "Challenge supported R1 label",
+        "initiated_at": "2026-11-23T20:02:21.977Z",
+        "tx_hash": "0x528b575efc009c0ce1f5b609be61731fcbb6d36eecbf82bb5bda0074efb81c63",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x528b575efc009c0ce1f5b609be61731fcbb6d36eecbf82bb5bda0074efb81c63",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:03:08.019Z",
+        "validator_votes": {
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "idle",
+          "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree",
+          "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+          "0xee46B9Dc4c860149B1d140840284e5374854e746": "idle"
+        }
+      },
+      "Review R1 ambiguity": {
+        "action": "Review R1 ambiguity",
+        "initiated_at": "2026-11-23T20:03:15.795Z",
+        "tx_hash": "0xba212e4779166ed95033f2217df0b065b75e68e9fdc6796ce07de7c8622965ca",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xba212e4779166ed95033f2217df0b065b75e68e9fdc6796ce07de7c8622965ca",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:04:21.979Z",
+        "validator_votes": {
+          "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "disagree",
+          "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+          "0x5e880d85a70De78dDEf86236d57c42e73F560615": "agree",
+          "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+          "0xee46B9Dc4c860149B1d140840284e5374854e746": "disagree"
+        }
+      },
+      "Publish R2": {
+        "action": "Publish R2",
+        "initiated_at": "2026-11-23T20:04:29.819Z",
+        "tx_hash": "0x6ddc90905014b878aba63ed0da2c43f6af02bfe4e349605b0474c83a45b7bd39",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x6ddc90905014b878aba63ed0da2c43f6af02bfe4e349605b0474c83a45b7bd39",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:05:10.315Z",
+        "validator_votes": {
+          "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "agree",
+          "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "agree",
+          "0x6DC61b906F74F44612c5545b0b79486133B3556d": "agree",
+          "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+          "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "idle"
+        }
+      },
+      "Approve R2 terms": {
+        "action": "Approve R2 terms",
+        "initiated_at": "2026-11-23T20:05:18.272Z",
+        "tx_hash": "0xfa16be99ca81244cd899c032d2fe2e66d32e5afb8948b839134566c6a36cd991",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xfa16be99ca81244cd899c032d2fe2e66d32e5afb8948b839134566c6a36cd991",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:06:05.817Z",
+        "validator_votes": {
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "idle",
+          "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+          "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree",
+          "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree",
+          "0xee46B9Dc4c860149B1d140840284e5374854e746": "agree"
+        }
+      },
+      "Review R2 TKT-104": {
+        "action": "Review R2 TKT-104",
+        "initiated_at": "2026-11-23T20:06:12.441Z",
+        "tx_hash": "0x29110142d993ef81bb68657b7f5a93b5f255be291142950a236e9157865d369e",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x29110142d993ef81bb68657b7f5a93b5f255be291142950a236e9157865d369e",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:06:54.302Z",
+        "validator_votes": {
+          "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "idle",
+          "0x23A15A452F19D1B616276fedC5B8B51d69082959": "agree",
+          "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+          "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+          "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree"
+        }
+      },
+      "Review R2 TKT-205": {
+        "action": "Review R2 TKT-205",
+        "initiated_at": "2026-11-23T20:07:00.855Z",
+        "tx_hash": "0x4359be7792718676ac993c27a6d8923f5871addfcd7fe9edc92be15a0dd063b8",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0x4359be7792718676ac993c27a6d8923f5871addfcd7fe9edc92be15a0dd063b8",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:07:52.647Z",
+        "validator_votes": {
+          "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "idle",
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+          "0x6DC61b906F74F44612c5545b0b79486133B3556d": "idle",
+          "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree"
+        }
+      },
+      "Review R2 TKT-318": {
+        "action": "Review R2 TKT-318",
+        "initiated_at": "2026-11-23T20:07:59.187Z",
+        "tx_hash": "0xdbb4a55c2682378cdc99725c5ab35e69adbd37519fea382e236c1e1cd3b2b5b1",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xdbb4a55c2682378cdc99725c5ab35e69adbd37519fea382e236c1e1cd3b2b5b1",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:08:42.344Z",
+        "validator_votes": {
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x5e880d85a70De78dDEf86236d57c42e73F560615": "idle",
+          "0x6DC61b906F74F44612c5545b0b79486133B3556d": "agree",
+          "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "agree",
+          "0xE74a9088aD4d6dBf3C8cABcC0B91072d2a8c8afa": "agree"
+        }
+      },
+      "Buyer accepts R2": {
+        "action": "Buyer accepts R2",
+        "initiated_at": "2026-11-23T20:10:36.063Z",
+        "tx_hash": "0xf86c6806862bb7d33d7767af3d8ffb1c5417c0700f102703c30057ce85256990",
+        "explorer_url": "https://explorer-studio.genlayer.com/tx/0xf86c6806862bb7d33d7767af3d8ffb1c5417c0700f102703c30057ce85256990",
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "FINISHED_WITH_RETURN",
+        "checked_at": "2026-11-23T20:11:24.878Z",
+        "validator_votes": {
+          "0x22Eda431B7fBC1216baE3b077a78c973a8719c58": "agree",
+          "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "idle",
+          "0x5e880d85a70De78dDEf86236d57c42e73F560615": "idle",
+          "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree",
+          "0xe358f855C96d8E7243836cf986eb037175B9467e": "agree"
+        }
+      }
+    },
+    "preflight_attempts": [
+      {
+        "action": "Publish R1",
+        "initiated_at": "2026-11-23T19:55:44.970Z",
+        "status": "NO_SUBMISSION",
+        "checked_pending_nonce": 0,
+        "reason": "Browser test interrupted before bridge submission by an empty route announcer alert."
+      }
+    ],
+    "challenge": {
+      "challenge_id": "LABELDESK-PORTAL-MWTOMQH2-R1-TKT-205",
+      "evidence_hash": "30a8f118e263a204c5566d695f715130a010f3fd4c6cf24d56ecbf9a34907ff1",
+      "finding_id": "JF-30a8f118e263a204c5566d69",
+      "opened_at": 1795464146,
+      "outcome": "REJECTED",
+      "proposed_label": "NEW_REFUND_REQUEST",
+      "resolution_basis": "REUSED_FINALIZED_MATCHING_FINDING",
+      "resolved_at": 1795464146,
+      "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+      "row_id": "TKT-205",
+      "rubric_clause_id": "NEW_REFUND_REQUEST",
+      "rubric_clause_text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved.",
+      "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+      "status": "FINALIZED",
+      "ticket_text": "The item arrived broken. Please refund my order."
+    },
+    "ambiguity": {
+      "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+      "row_id": "TKT-427",
+      "ticket_text": "Any news about my refund?",
+      "judgment": {
+        "binding": {
+          "bound_at": 1795464200,
+          "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+          "evidence_hash": "0bb5d8fd16e27d56a32872d4679d485610e4c10397a207b55203a9ed4c882919",
+          "finding_id": "JF-0bb5d8fd16e27d56a32872d4",
+          "proposed_label": "REFUND_STATUS",
+          "reused_finding": false,
+          "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+          "row_id": "TKT-427",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+          "source_revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1"
+        },
+        "finding": {
+          "evidence_excerpt": "",
+          "evidence_hash": "0bb5d8fd16e27d56a32872d4679d485610e4c10397a207b55203a9ed4c882919",
+          "explanation": "The customer asks for news about a refund, but the ticket does not establish that it was already approved or issued.",
+          "finalized_at": 1795464200,
+          "finding_id": "JF-0bb5d8fd16e27d56a32872d4",
+          "proposed_label": "REFUND_STATUS",
+          "row_id": "TKT-427",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+          "source_revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+          "ticket_text": "Any news about my refund?",
+          "verdict": "INSUFFICIENT"
+        }
+      },
+      "transaction_hash": "0xba212e4779166ed95033f2217df0b065b75e68e9fdc6796ce07de7c8622965ca",
+      "explorer_url": "https://explorer-studio.genlayer.com/tx/0xba212e4779166ed95033f2217df0b065b75e68e9fdc6796ce07de7c8622965ca",
+      "validator_votes": {
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "disagree",
+        "0x534af64FFB6796Bc69aBf4C26c50788F1fFAfe56": "agree",
+        "0x5e880d85a70De78dDEf86236d57c42e73F560615": "agree",
+        "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888": "agree",
+        "0xee46B9Dc4c860149B1d140840284e5374854e746": "disagree"
+      },
+      "consensus": "MAJORITY_AGREE",
+      "disagreeing_votes": 2
+    },
+    "revision_one": {
+      "acceptance_receipt": {},
+      "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+      "challenge_cutoff": 1795464402,
+      "challenges": [
+        {
+          "challenge_id": "LABELDESK-PORTAL-MWTOMQH2-R1-TKT-205",
+          "evidence_hash": "30a8f118e263a204c5566d695f715130a010f3fd4c6cf24d56ecbf9a34907ff1",
+          "finding_id": "JF-30a8f118e263a204c5566d69",
+          "opened_at": 1795464146,
+          "outcome": "REJECTED",
+          "proposed_label": "NEW_REFUND_REQUEST",
+          "resolution_basis": "REUSED_FINALIZED_MATCHING_FINDING",
+          "resolved_at": 1795464146,
+          "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+          "row_id": "TKT-205",
+          "rubric_clause_id": "NEW_REFUND_REQUEST",
+          "rubric_clause_text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved.",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+          "status": "FINALIZED",
+          "ticket_text": "The item arrived broken. Please refund my order."
+        }
+      ],
+      "closed_at": 0,
+      "closure_reason": "",
+      "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+      "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+      "parent_revision_id": "",
+      "published_at": 1795463802,
+      "publisher": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+      "reviewer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+      "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+      "revision_number": 1,
+      "rows": [
+        {
+          "proposedLabel": "NEW_REFUND_REQUEST",
+          "rowId": "TKT-104",
+          "ticketText": "Where is the refund you approved on Tuesday?"
+        },
+        {
+          "proposedLabel": "NEW_REFUND_REQUEST",
+          "rowId": "TKT-205",
+          "ticketText": "The item arrived broken. Please refund my order."
+        },
+        {
+          "proposedLabel": "REFUND_STATUS",
+          "rowId": "TKT-318",
+          "ticketText": "You said the money was on its way back to my card. When should I see it?"
+        },
+        {
+          "proposedLabel": "REFUND_STATUS",
+          "rowId": "TKT-427",
+          "ticketText": "Any news about my refund?"
+        }
+      ],
+      "rubric": {
+        "clauses": [
+          {
+            "id": "INSUFFICIENT",
+            "text": "If the text does not establish which applies, the result is INSUFFICIENT. Do not infer approval from the word refund."
+          },
+          {
+            "id": "NEW_REFUND_REQUEST",
+            "text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved."
+          },
+          {
+            "id": "REFUND_STATUS",
+            "text": "REFUND_STATUS means the customer asks about the progress, timing, or arrival of a refund already approved or issued."
+          }
+        ],
+        "version": "refund-label-rubric/1"
+      },
+      "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+      "sample_digest": "fdc5667d53738559982c594db6bcf2fbde3a71f72275dc863b427f93668daa4e",
+      "sample_ids": [
+        "TKT-104",
+        "TKT-205",
+        "TKT-318"
+      ],
+      "sample_result": {
+        "adjudicated_rows": 3,
+        "open_challenges": 0,
+        "sampled_rows": 3,
+        "supported_rows": 2,
+        "threshold": 3,
+        "unsupported_rows": 1
+      },
+      "status": "FAILED",
+      "terms_approved": true,
+      "terms_receipt": {
+        "approval_id": "TA-ad60c4b3b06e2d4d072cba60",
+        "approved_at": 1795463934,
+        "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+        "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+        "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+        "sample_digest": "fdc5667d53738559982c594db6bcf2fbde3a71f72275dc863b427f93668daa4e",
+        "sample_ids": [
+          "TKT-104",
+          "TKT-205",
+          "TKT-318"
+        ],
+        "threshold": 3
+      },
+      "threshold": 3
+    },
+    "revision_two": {
+      "acceptance_receipt": {
+        "accepted_at": 1795464641,
+        "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "challenge_cutoff": 1795464634,
+        "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+        "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+        "judgment_ids": [
+          "JF-1607691b05846d02fcd07c0b",
+          "JF-30a8f118e263a204c5566d69",
+          "JF-51722f96b5190a89e7a2be98"
+        ],
+        "receipt_id": "AR-20c9fc27bd732fe5da78341d",
+        "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R2",
+        "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+        "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+        "sample_ids": [
+          "TKT-104",
+          "TKT-205",
+          "TKT-318"
+        ],
+        "sampled_rows": 3,
+        "status": "ACCEPTED_BY_BUYER",
+        "supported_rows": 3
+      },
+      "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+      "challenge_cutoff": 1795464634,
+      "challenges": [],
+      "closed_at": 0,
+      "closure_reason": "",
+      "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+      "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+      "parent_revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+      "published_at": 1795464274,
+      "publisher": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+      "reviewer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+      "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R2",
+      "revision_number": 2,
+      "rows": [
+        {
+          "proposedLabel": "REFUND_STATUS",
+          "rowId": "TKT-104",
+          "ticketText": "Where is the refund you approved on Tuesday?"
+        },
+        {
+          "proposedLabel": "NEW_REFUND_REQUEST",
+          "rowId": "TKT-205",
+          "ticketText": "The item arrived broken. Please refund my order."
+        },
+        {
+          "proposedLabel": "REFUND_STATUS",
+          "rowId": "TKT-318",
+          "ticketText": "You said the money was on its way back to my card. When should I see it?"
+        },
+        {
+          "proposedLabel": "REFUND_STATUS",
+          "rowId": "TKT-427",
+          "ticketText": "Any news about my refund?"
+        }
+      ],
+      "rubric": {
+        "clauses": [
+          {
+            "id": "INSUFFICIENT",
+            "text": "If the text does not establish which applies, the result is INSUFFICIENT. Do not infer approval from the word refund."
+          },
+          {
+            "id": "NEW_REFUND_REQUEST",
+            "text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved."
+          },
+          {
+            "id": "REFUND_STATUS",
+            "text": "REFUND_STATUS means the customer asks about the progress, timing, or arrival of a refund already approved or issued."
+          }
+        ],
+        "version": "refund-label-rubric/1"
+      },
+      "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+      "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+      "sample_ids": [
+        "TKT-104",
+        "TKT-205",
+        "TKT-318"
+      ],
+      "sample_result": {
+        "adjudicated_rows": 3,
+        "open_challenges": 0,
+        "sampled_rows": 3,
+        "supported_rows": 3,
+        "threshold": 3,
+        "unsupported_rows": 0
+      },
+      "status": "ACCEPTED",
+      "terms_approved": true,
+      "terms_receipt": {
+        "approval_id": "TA-c1295c658e73043275a67d76",
+        "approved_at": 1795464322,
+        "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+        "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R2",
+        "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+        "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+        "sample_ids": [
+          "TKT-104",
+          "TKT-205",
+          "TKT-318"
+        ],
+        "threshold": 3
+      },
+      "threshold": 3
+    },
+    "comparison": {
+      "changed_row": {
+        "after": "REFUND_STATUS",
+        "before": "NEW_REFUND_REQUEST",
+        "field": "proposedLabel",
+        "row_id": "TKT-104",
+        "ticket_text": "Where is the refund you approved on Tuesday?"
+      },
+      "changes": [
+        {
+          "after": "REFUND_STATUS",
+          "before": "NEW_REFUND_REQUEST",
+          "field": "proposedLabel",
+          "row_id": "TKT-104",
+          "ticket_text": "Where is the refund you approved on Tuesday?"
+        }
+      ],
+      "common_sample_ids": [
+        "TKT-104",
+        "TKT-205",
+        "TKT-318"
+      ],
+      "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+      "revision_one": {
+        "acceptance_receipt": {},
+        "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "challenge_cutoff": 1795464402,
+        "challenges": [
+          {
+            "challenge_id": "LABELDESK-PORTAL-MWTOMQH2-R1-TKT-205",
+            "evidence_hash": "30a8f118e263a204c5566d695f715130a010f3fd4c6cf24d56ecbf9a34907ff1",
+            "finding_id": "JF-30a8f118e263a204c5566d69",
+            "opened_at": 1795464146,
+            "outcome": "REJECTED",
+            "proposed_label": "NEW_REFUND_REQUEST",
+            "resolution_basis": "REUSED_FINALIZED_MATCHING_FINDING",
+            "resolved_at": 1795464146,
+            "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+            "row_id": "TKT-205",
+            "rubric_clause_id": "NEW_REFUND_REQUEST",
+            "rubric_clause_text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved.",
+            "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+            "status": "FINALIZED",
+            "ticket_text": "The item arrived broken. Please refund my order."
+          }
+        ],
+        "closed_at": 0,
+        "closure_reason": "",
+        "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+        "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+        "parent_revision_id": "",
+        "published_at": 1795463802,
+        "publisher": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "reviewer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+        "revision_number": 1,
+        "rows": [
+          {
+            "proposedLabel": "NEW_REFUND_REQUEST",
+            "rowId": "TKT-104",
+            "ticketText": "Where is the refund you approved on Tuesday?"
+          },
+          {
+            "proposedLabel": "NEW_REFUND_REQUEST",
+            "rowId": "TKT-205",
+            "ticketText": "The item arrived broken. Please refund my order."
+          },
+          {
+            "proposedLabel": "REFUND_STATUS",
+            "rowId": "TKT-318",
+            "ticketText": "You said the money was on its way back to my card. When should I see it?"
+          },
+          {
+            "proposedLabel": "REFUND_STATUS",
+            "rowId": "TKT-427",
+            "ticketText": "Any news about my refund?"
+          }
+        ],
+        "rubric": {
+          "clauses": [
+            {
+              "id": "INSUFFICIENT",
+              "text": "If the text does not establish which applies, the result is INSUFFICIENT. Do not infer approval from the word refund."
+            },
+            {
+              "id": "NEW_REFUND_REQUEST",
+              "text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved."
+            },
+            {
+              "id": "REFUND_STATUS",
+              "text": "REFUND_STATUS means the customer asks about the progress, timing, or arrival of a refund already approved or issued."
+            }
+          ],
+          "version": "refund-label-rubric/1"
+        },
+        "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+        "sample_digest": "fdc5667d53738559982c594db6bcf2fbde3a71f72275dc863b427f93668daa4e",
+        "sample_ids": [
+          "TKT-104",
+          "TKT-205",
+          "TKT-318"
+        ],
+        "sample_result": {
+          "adjudicated_rows": 3,
+          "open_challenges": 0,
+          "sampled_rows": 3,
+          "supported_rows": 2,
+          "threshold": 3,
+          "unsupported_rows": 1
+        },
+        "status": "FAILED",
+        "terms_approved": true,
+        "terms_receipt": {
+          "approval_id": "TA-ad60c4b3b06e2d4d072cba60",
+          "approved_at": 1795463934,
+          "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+          "content_digest": "69236604f792c1df2a552405f50fe869c63e8da0e82642dac49f2b8403755a1f",
+          "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+          "sample_digest": "fdc5667d53738559982c594db6bcf2fbde3a71f72275dc863b427f93668daa4e",
+          "sample_ids": [
+            "TKT-104",
+            "TKT-205",
+            "TKT-318"
+          ],
+          "threshold": 3
+        },
+        "threshold": 3
+      },
+      "revision_two": {
+        "acceptance_receipt": {
+          "accepted_at": 1795464641,
+          "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+          "challenge_cutoff": 1795464634,
+          "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+          "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+          "judgment_ids": [
+            "JF-1607691b05846d02fcd07c0b",
+            "JF-30a8f118e263a204c5566d69",
+            "JF-51722f96b5190a89e7a2be98"
+          ],
+          "receipt_id": "AR-20c9fc27bd732fe5da78341d",
+          "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R2",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+          "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+          "sample_ids": [
+            "TKT-104",
+            "TKT-205",
+            "TKT-318"
+          ],
+          "sampled_rows": 3,
+          "status": "ACCEPTED_BY_BUYER",
+          "supported_rows": 3
+        },
+        "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "challenge_cutoff": 1795464634,
+        "challenges": [],
+        "closed_at": 0,
+        "closure_reason": "",
+        "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+        "dataset_id": "LABELDESK-PORTAL-MWTOMQH2",
+        "parent_revision_id": "LABELDESK-PORTAL-MWTOMQH2-R1",
+        "published_at": 1795464274,
+        "publisher": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "reviewer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+        "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R2",
+        "revision_number": 2,
+        "rows": [
+          {
+            "proposedLabel": "REFUND_STATUS",
+            "rowId": "TKT-104",
+            "ticketText": "Where is the refund you approved on Tuesday?"
+          },
+          {
+            "proposedLabel": "NEW_REFUND_REQUEST",
+            "rowId": "TKT-205",
+            "ticketText": "The item arrived broken. Please refund my order."
+          },
+          {
+            "proposedLabel": "REFUND_STATUS",
+            "rowId": "TKT-318",
+            "ticketText": "You said the money was on its way back to my card. When should I see it?"
+          },
+          {
+            "proposedLabel": "REFUND_STATUS",
+            "rowId": "TKT-427",
+            "ticketText": "Any news about my refund?"
+          }
+        ],
+        "rubric": {
+          "clauses": [
+            {
+              "id": "INSUFFICIENT",
+              "text": "If the text does not establish which applies, the result is INSUFFICIENT. Do not infer approval from the word refund."
+            },
+            {
+              "id": "NEW_REFUND_REQUEST",
+              "text": "NEW_REFUND_REQUEST means the customer asks the merchant to initiate a refund that has not already been approved."
+            },
+            {
+              "id": "REFUND_STATUS",
+              "text": "REFUND_STATUS means the customer asks about the progress, timing, or arrival of a refund already approved or issued."
+            }
+          ],
+          "version": "refund-label-rubric/1"
+        },
+        "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+        "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+        "sample_ids": [
+          "TKT-104",
+          "TKT-205",
+          "TKT-318"
+        ],
+        "sample_result": {
+          "adjudicated_rows": 3,
+          "open_challenges": 0,
+          "sampled_rows": 3,
+          "supported_rows": 3,
+          "threshold": 3,
+          "unsupported_rows": 0
+        },
+        "status": "ACCEPTED",
+        "terms_approved": true,
+        "terms_receipt": {
+          "approval_id": "TA-c1295c658e73043275a67d76",
+          "approved_at": 1795464322,
+          "buyer": "0x2120797649382CB7d17065a31714ed1a80B3d820",
+          "content_digest": "d640cf20aa101ebb6e327b4af4d44d1016e328f909bed4df16ab468e4f538fef",
+          "revision_id": "LABELDESK-PORTAL-MWTOMQH2-R2",
+          "rubric_hash": "6ca62f8748075bc4f28abe6e95e0d25cee09adbb3af1966138ecf6978089cc44",
+          "sample_digest": "7af92dd7e0e703f0fca924a50a1d01906ab742984f9f57ae7d29da928c35e760",
+          "sample_ids": [
+            "TKT-104",
+            "TKT-205",
+            "TKT-318"
+          ],
+          "threshold": 3
+        },
+        "threshold": 3
+      },
+      "rubric_identical": true,
+      "threshold_identical": true
+    },
+    "verified_at": "2026-11-23T20:11:34.660Z"
+  },
+  "explorer_verification": {
+    "checked_at": "2026-11-23T20:12:11.737Z",
+    "endpoint": "https://studio.genlayer.com/api",
+    "results": [
+      {
+        "url": "https://explorer-studio.genlayer.com/address/0x92A07f60A8fA04F681d43c849903d62209A70b4B",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "gen_getContractSchema",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/address/0xcf93AcA332767391af8002fB09f82eE06f6deFEb",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "gen_getContractSchema",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/address/0xd2f7d55a206FBF1a0a136cDFBE56952eDBaD10fB",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "gen_getContractSchema",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x0385a08d9ea01e6fbd729d937bc39aab280cadc7e7677f91e6b76b373b2e315c",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x1283c43bbe5756b596c2a9eed396b4d2f07f2aa8d1dbd1c65ba2ab2e4c09cf01",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x1a43fd11623cfdaa12cbb0a169e7a3a121b58d1fcbd15e945f5a1c350ac3cfc4",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x23dc3634aa4f8229c20e3557a32c7d958b49ba620692e8faffa115480e26ddaf",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x24b6785760fde8219575c9944145c9f16e12ca397af6edb972ddb301291bfd2a",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x26cc4fbe5a66488b2fc1921ddfa5fab6fa23cc8564968e29e0a36bec8b5e87a8",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x29110142d993ef81bb68657b7f5a93b5f255be291142950a236e9157865d369e",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x32a2c774a8c6a44ba86d9a5254300e851a3a0f9b354b38045710fb4b6ba938dc",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x330ea435a71bbb586d78b931e3d8739c9f901dfab03cf717a939d0611717cbcc",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x3c5af18ec6f55b5557b90b51cbf71bf27b63da0dd82daefaa8f4e3fc82ee73f1",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x3ebe2146961e32c8d28422280a29ac4aa18920ca04f7371a203ff98796531f87",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x4359be7792718676ac993c27a6d8923f5871addfcd7fe9edc92be15a0dd063b8",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x528b575efc009c0ce1f5b609be61731fcbb6d36eecbf82bb5bda0074efb81c63",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x5db28bc320b53801dd954cc2dda7d48b49183a5ed6d7ddc15087859409642482",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x69c40d42aa2e537a79efc7ab02e75a6f7268557e736e63dbd4833dca34d194fa",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x6ddc90905014b878aba63ed0da2c43f6af02bfe4e349605b0474c83a45b7bd39",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x713e02cb539375f11fe32908f13dd83c1de7461365fe4e88e0e5b2333392fc08",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x74fdb15051ee0c6f2b4d924d0e8353f92146d498f2b91a17d359daedb3f45970",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x75a7d4b22dfa9559d6647f1c27b4fa3df6c819b047d770f0689575fcc2a819a4",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x7714f6c7f940544ef1bfcf1aebfc1e226a850616f2a8a75db6d253ad8bf1cae0",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x790e4032a1e8911276be0a7fa0df261d7ab51c1450e879b2a9b65d82c02f7492",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x7c2ae97116650e7ffe6820325bec4b1d743a781a99d9349ae82f634dd24a958f",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x7d9ba108606a703b0a9f19476019eb9f4607f0fcb443acf03bdfceea8743318d",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x7f0df36c2ea9c8b444ca586230b817b8519608167e7bc218539965f24ac20711",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x8d993cddb638d7938e0430575878e63e2af9922d248fae88bc1a87121697923b",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x8e5abab97755421cd21e453992a43efd20bc8c038be1e89c0546765c626bf9af",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0x940369edbb0d3a56e2fc5d81709cddcf4c62546c91681b59d73550d070703018",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xabaf2a8c29229a2cdf8659272a3886addd0702000f440c0d64de3d080fb5e1fe",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xb16cc393754e96acb632458cb85c7fee230edd33bfa74ca72e7f27263fde5929",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xb3de1d5253abb56e514209a672689beb7bd05463c877a419a63366e857f9e745",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xb409940f3c5b977022b819d761885031ef00cac85ebf1721431d25a4956f9732",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xba212e4779166ed95033f2217df0b065b75e68e9fdc6796ce07de7c8622965ca",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xbed7ecb169bf8d9c42a5f7f811efd12ab9422202fdf5a7dabb91f0974ec9cd49",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xc0d5e00187c499fed9ccab1769f2b55e36b2f87a9d91dd722b167bd4c3e6fe67",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xc57a80daea77e6f92ea65b7733737786160f16920c0b1c061cf6f375c3d5049a",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xc58346ab66daca2db9349c31277496b96057adeffe6e7a614c0972feb2546613",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xd1158260a816f8b95fc2e4296ca83ca474f3df5253881a0a3fe5d24b485efb01",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xd23b93c706741363c72e542525172253b5b22f92fcac8e1ecb23c1ea05521c85",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xe1ff38641c630cdcf54c4fad6e7e673949f42d5bde7b54524ac43076ea73ec9b",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xf390a8a997063b0a08f7670372140064388d8f8a7dafbfe730380c945b68d80b",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xf5017afa1a1b514b3478be646edb5ad01098a2e37b3586738da55224d5a251de",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xfa16be99ca81244cd899c032d2fe2e66d32e5afb8948b839134566c6a36cd991",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xdbb4a55c2682378cdc99725c5ab35e69adbd37519fea382e236c1e1cd3b2b5b1",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      },
+      {
+        "url": "https://explorer-studio.genlayer.com/tx/0xf86c6806862bb7d33d7767af3d8ffb1c5417c0700f102703c30057ce85256990",
+        "chain_id": 61999,
+        "http_status": 200,
+        "api": "eth_getTransactionByHash",
+        "verified": true
+      }
+    ]
+  },
+  "production": {
+    "public_url": "https://labeldesk-alpha.vercel.app",
+    "deployment_id": "dpl_BpHjoBL8XemZ8YChDxRNWMcmyK4B",
+    "deployment_host": "labeldesk-jaffsh06j-wattxs-projects.vercel.app",
+    "source_files": 38,
+    "excluded_files_present": 0,
+    "build_download_log": "2026-11-23T20:12:58.665Z  Downloading 38 deployment files...",
+    "build_completion_log": "2026-11-23T20:13:12.009Z  Build Completed in /vercel/output [12s]",
+    "dotenv_reported_by_next": false,
+    "browser_verification": {
+      "checked_at": "2026-11-23T20:16:43.937Z",
+      "route_status": {
+        "/": 200,
+        "/compare": 200
+      },
+      "signed_out_viewport_widths": [
+        1440,
+        390
+      ],
+      "fresh_releases_and_receipt_visible": true,
+      "ambiguity_verdict_and_explorer_url_visible": true,
+      "ambiguity_vote_split_visible": true
+    }
+  }
+}

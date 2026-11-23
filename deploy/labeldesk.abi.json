@@ -1,0 +1,256 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "accept_release": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "adjudicate_challenge": {
+      "params": [
+        [
+          "challenge_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "approve_terms": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ],
+        [
+          "expected_content_digest",
+          "string"
+        ],
+        [
+          "expected_sample_digest",
+          "string"
+        ],
+        [
+          "expected_rubric_hash",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "close_expired_review": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "get_acceptance_receipt": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_challenge": {
+      "params": [
+        [
+          "challenge_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_comparison": {
+      "params": [
+        [
+          "revision_one_id",
+          "string"
+        ],
+        [
+          "revision_two_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_judgment": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ],
+        [
+          "row_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_release": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_release_ids": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "array"
+    },
+    "get_terms_approval": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "publish_release": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ],
+        [
+          "dataset_id",
+          "string"
+        ],
+        [
+          "revision_number",
+          "int"
+        ],
+        [
+          "parent_revision_id",
+          "string"
+        ],
+        [
+          "rows_json",
+          "string"
+        ],
+        [
+          "sample_ids_json",
+          "string"
+        ],
+        [
+          "rubric_json",
+          "string"
+        ],
+        [
+          "threshold",
+          "int"
+        ],
+        [
+          "buyer",
+          "address"
+        ],
+        [
+          "reviewer",
+          "address"
+        ],
+        [
+          "challenge_window_seconds",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "review_example": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ],
+        [
+          "row_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "review_row": {
+      "params": [
+        [
+          "revision_id",
+          "string"
+        ],
+        [
+          "row_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "submit_challenge": {
+      "params": [
+        [
+          "challenge_id",
+          "string"
+        ],
+        [
+          "revision_id",
+          "string"
+        ],
+        [
+          "row_id",
+          "string"
+        ],
+        [
+          "rubric_clause_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    }
+  }
+}

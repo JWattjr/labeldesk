@@ -1,0 +1,7 @@
+{
+  "dataset_id": "LABELDESK-REFUNDS-SYNTHETIC",
+  "revision_one_id": "LABELDESK-REFUNDS-R1",
+  "revision_two_id": "LABELDESK-REFUNDS-R2",
+  "challenge_window_seconds": 600,
+  "decision_source": "synthetic preview until deployed contract state replaces it"
+}
